@@ -1,8 +1,8 @@
 def my_each(array)
   i = 0
   while i < array.size
-    block_given? # optional
-    yield(array[i]) # if block, then yield to block # also need to pass argument(s) to yield, otherwise block is operating on nil
+    block_given?
+    yield(array[i])
     i += 1
   end
 array
