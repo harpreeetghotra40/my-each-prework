@@ -1,7 +1,9 @@
-def my_each(array) do |i|
-  done = 0
-  while done < array.length
-    puts i
-    done += 1
+def my_each(array)
+  i = 0
+  while i < array.size
+    block_given? # optional
+    yield(array[i]) # if block, then yield to block # also need to pass argument(s) to yield, otherwise block is operating on nil
+    i += 1
   end
-end
+array
+end	end
